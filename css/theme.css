@@ -897,3 +897,25 @@ ul.sociallinks {
 .postcattitle {
 	margin-left: var(--mobilemargin);
 }
+
+.gridinnertext {
+	max-width:90vw;
+	text-align:center;
+}
+
+section {
+	flex-wrap:wrap;
+}
+
+.pageleft {
+	width:var(--mobilemainwidth);
+}
+
+.pageleft > img {
+	width:100vw!important;
+}
+
+.pageright {
+	width:var(--mobilemainwidth);
+}
+}
