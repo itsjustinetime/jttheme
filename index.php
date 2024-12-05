@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <?php 
-
  ?>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
@@ -60,6 +59,11 @@ endif;
 
 //echo $WHERE_AM_I.'<br>';
 $scrollclass="";
+
+if ($WHERE_AM_I == "tag") {
+	include(THEME_DIR.'tag.php');
+}
+	
 if ($WHERE_AM_I == "home") { 
 include(THEME_DIR.'news.php');
 	Theme::plugins('LFF_Events');
