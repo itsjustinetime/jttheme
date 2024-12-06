@@ -66,9 +66,14 @@ if ($WHERE_AM_I == "tag") {
 	
 if ($WHERE_AM_I == "home") { 
 include(THEME_DIR.'news.php');
+
 	Theme::plugins('LFF_Events');
+echo '<div class="content">';	
 	Theme::plugins('LFF_Future');
+	echo '</div>';
+	echo '<div class="content">';
 	Theme::plugins('LFF_VenuesRec');
+	echo '</div>';
 	$scrollclass="js-scroll";
 }
  
