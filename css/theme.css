@@ -401,6 +401,7 @@ article {
 .article-col{
 	display:flex;
 	flex-direction: row;
+	margin-top:2vh;
 }
 
 .articlecoverimage {
@@ -545,17 +546,13 @@ h5 {
 }
 	
 .gallerytitle {
-    background: rgba(0, 0, 0, 0.5);
     color: white;
     text-align: center;
-    font-size: .75em;
-    top: -3vw;
+    padding-top: 1vh;
     position: relative;
-    padding: 1vw;
     max-width: 23vw;
-    /* width: 50%; */
     border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 	
 .eventtext {
@@ -775,6 +772,10 @@ ul.headerlinks {
 	margin-left:var(--mobilemargin);
 }
 
+article h4 {
+	 margin-left:var(--mobilemargin);
+}
+
 .articleinfotext {
 	width:45vw;
 	margin-left: var(--mobilemargin);
@@ -898,6 +899,10 @@ h3 {
 	/* margin-left:var(--mobilemargin); */
 }
 
+.gallery h4 {
+	margin:0;
+}
+
 .galleryimg {
 	width:var(--mobilemainwidth);;
 }
@@ -908,8 +913,8 @@ h3 {
 
 .gallerytitle {
 	max-width:var(--mobilemainwidth);
-	top: -4.4vh;
 }
+
 .coverimage {
 	width:100vw;
 }

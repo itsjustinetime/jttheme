@@ -173,7 +173,6 @@ function hasScrolled() {
         // Scroll Up
         if(st + $(window).height() < $(document).height()) {
             $('#siteheader').removeClass('hide').addClass('show');
-			setTimeout(function() { $('#siteheader').removeClass('show').addClass('hide'); }, 5000);
         }
     }
     
