@@ -74,9 +74,8 @@ if ($WHERE_AM_I == "tag") {
 }
 	
 if ($WHERE_AM_I == "home") { 
-include(THEME_DIR.'news.php');
 
-echo '<div class="content">';	
+	echo '<div class="content">';	
 	Theme::plugins('LFF_Future');
 	echo '</div>';
 	echo '<div class="content">';
@@ -86,6 +85,7 @@ echo '<div class="content">';
 	Theme::plugins('LFF_Hotels');
 	echo '</div>';
 	$scrollclass="js-scroll";
+	include(THEME_DIR.'news.php');
 }
 
 else if ($WHERE_AM_I == 'page' && !$_GET) {  ?>
@@ -173,6 +173,7 @@ function hasScrolled() {
         // Scroll Up
         if(st + $(window).height() < $(document).height()) {
             $('#siteheader').removeClass('hide').addClass('show');
+			setTimeout(function() { $('#siteheader').removeClass('show').addClass('hide'); }, 5000);
         }
     }
     
