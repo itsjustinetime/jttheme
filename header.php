@@ -2,14 +2,14 @@
 
 ?>
 <div class="navclose" id="navclose">
-	<div id="navclosebtn"><i class="fa-solid fa-xmark"></i></div>
+	<div id="navclosebtn">close&nbsp;<i class="fa-solid fa-xmark"></i></div>
 </div>
 <header class="mainheader">
 
 
 <div class="siteheader" id="siteheader">
 	<div class="container">
-	<a href="/web">	<img class="sitelogo" src="<?php echo $site->logo() ?>" alt="LFF Logo"> </a>
+	<a href="/web">	<img class="sitelogo" style="view-transition-name:logotransZ;" src="<?php echo $site->logo() ?>" alt="LFF Logo"> </a>
 	<div class="headerlinkbox">
 		<ul class="headerlinks">
 			<li class="headerlink" id="navopenbtn"><i class="fa-solid fa-bars"></i></li>
@@ -19,10 +19,10 @@
 </div>
 	
 <div class="navigation" id="navarea">
-	<div class="navcontainer">
+	<div class="navcontainer" id="navcon">
 		<div class="navcatcontainer">
 			<ul class="">
-				<li class="navitem"><a href="/web">Home</li>
+				<li class="navitem"><a href="/web">Home</a></li>
 			</ul>
 		</div>
 <?php
@@ -56,15 +56,16 @@
 		</div>
     <?php } ?>
 	<div class="navcatcontainer">
-		<div class="navcattitle">Social Media</div>
+		<div class="navcattitle">Our Social Media</div>
 			<ul class="navcategory">
 			<?php 
 			 $socialNetworks = array(
                     // Key => Label
                     'facebook'=>'Facebook',
                     'instagram'=>'Instagram',
-                    'mixcloud'=>'Mixcloud',
-                    'discord'=>'Discord'
+                    'discord'=>'Discord',
+					'bluesky'=>'Bluesky',
+					'mixcloud'=>'Mixcloud'
                 );
 			foreach ($socialNetworks as $key=>$label): ?>
                     <?php if ($site->{$key}()): ?>

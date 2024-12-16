@@ -28,7 +28,7 @@ $limit=3;
 		<h3 class="<? php echo $scrollClass; ?> slide-left"><a href="<?php echo $page->permalink(); ?>"><?php echo $page->title() ?></a></h3>
 		<div class="article-col">
 			<div class="firstcol">
-				<a href="<?php echo $page->permalink() ?>" class="image"><img class="<?php echo $scrollClass; ?> slide-right articlecoverimage" src="<?php echo $page->coverImage() ?>" alt="" /></a>
+				<a href="<?php echo $page->permalink() ?>" class="image"><img style="view-transition-name:<?php echo str_replace(" ","_",$page->title()); ?>" class="<?php echo $scrollClass; ?> slide-right articlecoverimage" src="<?php echo $page->coverImage() ?>" alt="" /></a>
 			</div>
 			<div class="middlecol pagetext <? php echo $scrollClass; ?> fade-in">
 			<?php echo $page->contentBreak() ?>

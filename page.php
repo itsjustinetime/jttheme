@@ -5,11 +5,11 @@ $page=array_shift($content); ?>
 
 <article>
 	<h3 class=""><?php echo $page->title() ?></h3>
-	<div class="article">	
-		<a href="<?php echo $page->permalink() ?>" class="image"><img class="<?php echo $scrollClass; ?> slide-right coverimage" src="<?php echo $page->coverImage() ?>" alt="" /></a>
+	<div class="bums">	
+		<a href="<?php echo $page->permalink() ?>" class="image"><img style="view-transition-name:<?php echo str_replace(" ","_",$page->title()); ?>" class="<?php echo $scrollClass; ?> slide-right coverimage" src="<?php echo $page->coverImage() ?>" alt="" /></a>
 		
 		<div class="singlepagetext <?php echo $scrollClass; ?> fade-in">
-		<?php echo $page->contentBreak() ?>
+		<?php echo $page->contentBreak(); ?>
 
 		<!-- Read more button -->
 		<?php if($page->readMore()): ?>
