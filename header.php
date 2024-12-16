@@ -27,7 +27,12 @@
 		</div>
 <?php
     $items = getCategories();
-
+	$order = array("About","Useful Info","What's On", "Services","News");
+	usort($items, function ($a, $b) use ($order) {
+    $pos_a = array_search($a->name(), $order);
+    $pos_b = array_search($b->name(), $order);
+    return $pos_a - $pos_b;
+});
     foreach ($items as $category) {
 	if ($category->name() == "Venues") { continue; }  ?>
 		<div class="navcatcontainer">
