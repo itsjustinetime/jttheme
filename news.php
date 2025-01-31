@@ -45,7 +45,7 @@ $limit=3;
 			<div class="articleinfo lastcol">
 					<ul class="articleinfotext">
 						<li><?php echo $page->date(); ?></li>
-						<li><?php echo $page->username(); ?></li>
+						<li><?php echo $page->username() . getPronouns($page->username()); ?></li>
 					</ul>
 					<div class="articletags">
 						<ul class="articletaglist">

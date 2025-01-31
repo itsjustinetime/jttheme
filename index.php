@@ -5,6 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <?php 
+	
+	function getPronouns ($username) {
+		$users=new Users();
+		$userInfo = $users->getUserDB($username);
+		if ($userInfo['pronouns']) {	return ' (' . $userInfo['pronouns'] . ') '; } else return '';
+	}
+	
 	 $requestURIlist = explode("/",$_SERVER['REQUEST_URI']);
 	 $myURI=end($requestURIlist);
 	 if ( $myURI == 'list.php' || $myURI == 'app' ) {   }
